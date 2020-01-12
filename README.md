@@ -1,3 +1,9 @@
+
+# Notes
+Here is my take on the App Dev Entrance project. 
+I still have some minors bugs to fix, but It works well enough for now.
+
+
 # App Developer Entrance Project
 
 Create a client-side quiz app based on the provided requirements, data and views.
