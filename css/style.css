@@ -56,3 +56,11 @@ html {
       cursor: pointer;
       display: none;
   }
+
+  .passed{
+    display: none;
+  }
+
+  .fail{
+    display: none;
+  }
