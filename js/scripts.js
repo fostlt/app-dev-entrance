@@ -11,6 +11,16 @@ const game = {};
 game.score = 0;
 const pass = document.querySelector('.passed');
 const fail = document.querySelector('.fail');
+const menu = document.querySelector('.menu');
+let nmbChange = 0;
+
+
+quizTwo.addEventListener('click', loadQuestionsTwo);
+function loadQuestionsTwo(){
+  console.log("test");
+  nmbChange++
+  loadQuestions();
+}
 
 
 
@@ -26,10 +36,10 @@ function loadQuestions(){
   }).then(function(data){
     console.log(data);
     
-    game.total = data.quizzes[0].questions.length;
+    game.total = data.quizzes[nmbChange].questions.length;
     game.val = 0;
-    game.arr = data.quizzes[0].questions;
-    game.ans = data.quizzes[0].questions.answers;
+    game.arr = data.quizzes[nmbChange].questions;
+    game.ans = data.quizzes[nmbChange].questions.answers;
     game.test = 0;
     let number = 0 + Math.floor(Math.random() * 3);
     //console.log(game.ans);
@@ -104,14 +114,16 @@ function loadQuestions(){
             if (game.score < 2){
               
               fail.style.display = "block";
-              
+              menu.style.display = "block";
+              menu.addEventListener('click', menubtn);
             }else{
               pass.style.display = "block";
+              menu.style.display = "block";
+              menu.addEventListener('click', menubtn);
             }
 
         }
 
-          
 
 
         }
@@ -126,7 +138,9 @@ function loadQuestions(){
 }
 
 
-
+function menubtn(){
+  location.reload(true);
+}
 
 
 

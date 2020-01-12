@@ -51,8 +51,22 @@ html {
     margin: 0 auto;
     text-align: center;
     border: 1px solid black;
+    margin-bottom: 10px;
     
   }
+
+.quizTwo{
+  width: 300px;
+  margin: 20px 0;
+  color: #333333;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid black;
+}
+
+
 
   .next{
       background-color: darkgrey;
@@ -68,11 +82,17 @@ html {
   .passed{
     display: none;
     text-align: center;
+    color: blue;
+    font-size: 2em;
+    margin-bottom: 1rem;
   }
 
   .fail{
     display: none;
     text-align: center;
+    color: red;
+    font-size: 2em;
+    margin-bottom: 1rem;
   }
 
   .btn {
@@ -82,9 +102,23 @@ html {
     font-size: .7em;
     border: 1px solid black;
     margin-right: 13px;
+    cursor: pointer;
   }
 
 .quizQ{
   padding: 10px 30px;
+  text-align: center;
+}
+.menu{
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 30px;
+  width: 300px;
+  margin: 0 auto;
+  display: none;
+  cursor: pointer;
+}
+
+.title{
   text-align: center;
 }
