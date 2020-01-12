@@ -2,7 +2,8 @@
 # Notes
 Here is my take on the App Dev Entrance project. 
 I still have some minors bugs to fix, but It works well enough for now.
-
+-
+Need to do still - Made question random, but it reuses the same question currently.
 
 # App Developer Entrance Project
 

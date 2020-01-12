@@ -122,3 +122,12 @@ html {
 .title{
   text-align: center;
 }
+
+.text{
+  text-align: center;
+  display: none;
+}
+
+.timer{
+  text-align: center;
+}

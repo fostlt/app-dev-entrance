@@ -13,6 +13,10 @@ const pass = document.querySelector('.passed');
 const fail = document.querySelector('.fail');
 const menu = document.querySelector('.menu');
 let nmbChange = 0;
+const timerrr = document.querySelector('.timer');
+const texttitle = document.querySelector('.text');
+
+  
 
 
 
@@ -24,11 +28,10 @@ function loadQuestionsTwo(){
   loadQuestions();
 }
 
-
-
 quizOne.addEventListener('click', loadQuestions);
 function loadQuestions(){
   
+  texttitle.style.display = "block";
   quizTwo.style.display = "none";
   quizOne.style.display = "none";
   fetch(url).then(function(res){
@@ -43,9 +46,7 @@ function loadQuestions(){
     game.test = 0;
     let number = 0 + Math.floor(Math.random() * 3);
     //console.log(game.ans);
-
     
-
 
 
     //message.textContent = 'Question #'+(game.val+1)+ ' out of '+ (game.total)
@@ -105,6 +106,8 @@ function loadQuestions(){
           next.style.display = "none";
           quizOne.style.display = "block";
           quizOne.textContent = "Next Question";
+
+          
           
           //console.log(rndmNumber + 'tst');
           console.log(game);
@@ -115,6 +118,7 @@ function loadQuestions(){
             message.innerHTML = "";
             quizOne.style.display = "none";
             message.textContent = 'Your final score was ' + game.score + ' out of ' + game.total;
+
             
             if (game.score < 2){
               
