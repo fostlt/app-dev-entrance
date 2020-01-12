@@ -15,6 +15,8 @@ const menu = document.querySelector('.menu');
 let nmbChange = 0;
 
 
+
+
 quizTwo.addEventListener('click', loadQuestionsTwo);
 function loadQuestionsTwo(){
   console.log("test");
@@ -26,8 +28,6 @@ function loadQuestionsTwo(){
 
 quizOne.addEventListener('click', loadQuestions);
 function loadQuestions(){
-
-
   
   quizTwo.style.display = "none";
   quizOne.style.display = "none";
@@ -44,7 +44,7 @@ function loadQuestions(){
     let number = 0 + Math.floor(Math.random() * 3);
     //console.log(game.ans);
 
-
+    
 
 
 
@@ -69,6 +69,9 @@ function loadQuestions(){
       //console.log(span.answer);
 
 
+
+
+
       span.addEventListener('click', checker);
       function checker(e){
         const selAns = document.querySelectorAll('.answer');
@@ -81,14 +84,15 @@ function loadQuestions(){
         if (span.answer === true){
           console.log("nice");  
           span.style.color = 'green';
-          next.textContent = 'Correct';
+          next.textContent = 'Correct - Click for the next question';
           game.score++;
         
           
         }else{
           console.log("not nice");
           span.style.color = 'red';
-          next.textContent = 'Incorrect';
+          next.textContent = 'Incorrect - Click for the next question';
+          
         }
         next.style.display = "block";
         next.addEventListener('click', newAnswer);
@@ -101,6 +105,7 @@ function loadQuestions(){
           next.style.display = "none";
           quizOne.style.display = "block";
           quizOne.textContent = "Next Question";
+          
           //console.log(rndmNumber + 'tst');
           console.log(game);
           // if (game.val === 3){
@@ -141,6 +146,7 @@ function loadQuestions(){
 function menubtn(){
   location.reload(true);
 }
+
 
 
 
