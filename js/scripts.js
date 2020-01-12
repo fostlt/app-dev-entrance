@@ -18,8 +18,8 @@ quizOne.addEventListener('click', loadQuestions);
 function loadQuestions(){
 
 
-
-
+  
+  quizTwo.style.display = "none";
   quizOne.style.display = "none";
   fetch(url).then(function(res){
     return res.json()
@@ -52,8 +52,10 @@ function loadQuestions(){
       let span = document.createElement('span');
       span.textContent = el.content;
       message.appendChild(span);
+      message.setAttribute('class', 'quizQ');
       span.answer = el.value;
       span.classList.add('answer');
+      span.classList.add('btn');
       //console.log(span.answer);
 
 
@@ -83,7 +85,8 @@ function loadQuestions(){
         function newAnswer(){
           //console.log("test");
 
-          message.innerHTML = "";
+          message.innerHTML = 'You have ' + game.score + ' out of ' + game.total + ' correct.';
+          
           game.val++;
           next.style.display = "none";
           quizOne.style.display = "block";
@@ -97,9 +100,9 @@ function loadQuestions(){
             message.innerHTML = "";
             quizOne.style.display = "none";
             message.textContent = 'Your final score was ' + game.score + ' out of ' + game.total;
-            console.log("ayyyyy");
+            
             if (game.score < 2){
-              console.log("hey it works");
+              
               fail.style.display = "block";
               
             }else{
